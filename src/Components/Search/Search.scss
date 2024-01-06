@@ -1,0 +1,55 @@
+@import "../style/main.scss";
+
+.search {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  background: #fff;
+  box-shadow: -1px 0 0 0 0 #e2e6e9;
+  margin: 20px auto;
+  border: 1px solid rgba(226, 230, 233, 1);
+
+  @include onTablet {
+    margin: 20px 0;
+  }
+
+  @include onDesktop {
+    margin: 0;
+    border: none;
+    border-left: 1px solid rgba(226, 230, 233, 1);
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 10px;
+    color: #b4bdc3;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    outline: none;
+
+    &::placeholder {
+      color: #b4bdc3;
+    }
+
+    @include onDesktop {
+      padding: 21px;
+      width: max-content;
+    }
+  }
+
+  &__icon {
+    height: 16px;
+    width: 16px;
+    padding: 10px 20px;
+
+    @include onDesktop {
+      padding: 24px;
+    }
+  }
+}

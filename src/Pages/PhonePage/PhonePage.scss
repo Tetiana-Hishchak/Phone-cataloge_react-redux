@@ -1,0 +1,71 @@
+@import "../../components/style/main.scss";
+
+.phones {
+  &__text {
+    display: block;
+  }
+
+  &__text1 {
+    display: block;
+    color: $gray-secondary;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+  }
+
+  &__item {
+    list-style: none;
+    text-decoration: none;
+    justify-content: space-between;
+    padding: 0 2px;
+  }
+
+  &__search {
+    display: block;
+
+    @include onDesktop {
+      display: none;
+    }
+  }
+
+  &__input {
+    display: block;
+    padding: 16px 0;
+
+    @include onTablet {
+      display: flex;
+      justify-content: start;
+      gap: 10px;
+    }
+  }
+
+  &__list {
+    margin: 10px 0;
+    display: grid;
+    grid-template-columns: repeat(1,260px);
+    grid-row-gap: 20px;
+    gap: 20px;
+    justify-content: center;
+    padding-inline-start: 0;
+
+    @include onTablet {
+      grid-template-columns: repeat(2, 260px);
+      grid-gap: 16px;
+      gap: 40px;
+      justify-content: space-between;
+    }
+
+    @media (min-width: 800px) and (max-width: 1200px) {
+      grid-template-columns: repeat(3, 250px);
+      gap: 2px;
+      justify-content: space-between;
+    }
+
+    @media (min-width: 1201px) {
+      margin: 0;
+      grid-template-columns: repeat(4, 250px);
+      grid-gap: 4px;
+      justify-content: space-between;
+    }
+  }
+}

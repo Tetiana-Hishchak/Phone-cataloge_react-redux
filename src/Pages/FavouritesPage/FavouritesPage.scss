@@ -1,0 +1,32 @@
+@import "../../components/style/main.scss";
+
+.favourites {
+  &__count {
+    position: absolute;
+    display: flex;
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    background-color: $red;
+    justify-content: center;
+    align-items: center;
+    top: calc(50% - 13px);
+    left: calc(50% + 13px);
+    transform: translate(-50%, -50%);
+  }
+
+  &__count-text {
+    color: $gray-white;
+    text-align: center;
+    font-size: 9px;
+    font-weight: 600;
+  }
+
+  &__search {
+    display: block;
+
+    @include onDesktop {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,89 @@
+@import "../style/main.scss";
+
+.brand {
+  display: block;
+
+  @include onDesktop {
+    max-width: 1136px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+
+    @include onTablet {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__title {
+    font-size: 28px;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: flex-end;
+    justify-items: end;
+    height: 32px;
+
+    &--right,
+    &--left {
+      width: 32px;
+      height: 32px;
+      background-repeat: no-repeat;
+      background-position: center;
+      flex-shrink: 0;
+      border: 1px solid $gray-icons-placeholders;
+    }
+
+    &--left {
+      margin-right: 8px;
+      rotate: (180deg);
+      background-image: url(../../img/icon/ArrowRight.png);
+
+      &:hover {
+        border: 1px solid $gray-primary;
+      }
+
+      &:disabled {
+        border: 1px solid $gray-elements;
+      }
+    }
+
+    &--right {
+      background-image: url(../../img/icon/ArrowRight.png);
+
+      &:hover {
+        border: 1px solid $gray-primary;
+      }
+
+      &:disabled {
+        border: 1px solid $gray-elements;
+      }
+    }
+  }
+}
+
+.product {
+  margin: 0 auto;
+  width: 272px;
+
+  @include onTablet {
+    width: 100%;
+  }
+
+  @include onDesktop {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.swiper-wrapper:nth-child(4n) {
+  margin-right: 0 !important;
+}
+
+.swiper-slide {
+  justify-content: center;
+}
